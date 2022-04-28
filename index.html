@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Developerhamid">
+    <title>Weather - Today's day finder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="input-box">
+            <input type="text" id="Input" />
+            <button id="Btn">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="data-box py-3">
+            <span id="errMsg"></span>
+            <h2>Weather in <span id="city">Tokyo</span></h2>
+            <h2 id="temp" class="py-3">35 °C</h2>
+            <div class="Icon-box">
+                <img src="http://openweathermap.org/img/wn/01d@2x.png"" alt="wheatherIcon" class="weather-icon" />
+                <p id="descr">Sunny</p>
+            </div>
+            <p id="humi">Humidity: 23%</p>
+            <p id="wind">Wind speed: 12 km/h</p>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Roboto Slab", serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("../img/bg.jpg") center/cover;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #34313182;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem;
+  font-family: var(--main-font);
+  transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.card:hover {
+    transform: scale(1.001,1.001);
+    box-shadow: 0 2px 7px -1px black;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#Input {
+  width: calc(100% - 10%);
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  outline: none;
+  font-family: var(--main-font);
+  text-transform: capitalize;
+}
+
+#Btn {
+  margin: 0 8px;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  transition: all 0.4s linear;
+  outline: none;
+}
+
+#Btn:hover {
+  cursor: pointer;
+  background: rgb(58, 58, 58);
+  color: #ffffff;
+}
+
+.py-3 {
+  padding: 1rem 0;
+}
+
+#temp {
+  font-size: 2.5rem;
+}
+
+.Icon-box{
+    display: flex;
+    align-items: center;
+}
+
+#humi{
+    margin: 4px 0;
+}
