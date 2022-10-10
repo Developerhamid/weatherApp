@@ -1,4 +1,5 @@
 const Btn = document.getElementById("Btn");
+const Input = document.getElementById("Input");
 
 const showWeather = async () => {
   try {
@@ -19,9 +20,11 @@ const showWeather = async () => {
         "&appid=e09d5300d4829c84803a3143a13eeeab&units=metric"
     );
     const data = await res.json();
-    console.log(data);
 
-    // for getting icon and description for our weather app
+    /* ==================================================================
+            for getting icon and description for our weather app
+      ================================================================= */
+    
     let getIcon = data.weather[0].icon;
     let descrip = data.weather[0].description;
 
@@ -31,9 +34,18 @@ const showWeather = async () => {
     descr.textContent = descrip;
     humi.textContent = `Humidity:  ${data.main.humidity}%`;
     wind.textContent = `Wind speed:  ${data.wind.speed} km/h`;
+
+    Input.value = "";
   } catch (err) {
     errMsg.textContent = `Pls.enter valid city 🌞`;
   }
 };
 
+const callTheData = (e) => {
+  if (e.keyCode === 13) {
+    showWeather();
+  }
+};
+
 Btn.addEventListener("click", showWeather);
+Input.addEventListener("keypress", callTheData);
